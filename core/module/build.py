@@ -5,3 +5,5 @@ from typing import Dict, TypedDict
 class Builder():
     def __init__(self, instruction:str) -> None:
         self.instruction = instruction
+
+    
