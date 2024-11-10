@@ -1,8 +1,12 @@
+import argparse
 from core.module.build import Builder
 
-def print_hi(name):
-    print(f'Hi, {name}')  # 중단점을 전환하려면 Cmd+F8을(를) 누릅니다.
-
+parser = argparse.ArgumentParser(description='Searching paper for User Instruction from Google Scholar & Arxiv')
+parser.add_argument('-i', '--input', type=str,  help='User Instruction')
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    args = parser.parse_args()
+
+    module = Builder()
+    graph = module.compile()
+    module.run(graph=graph, instruction=args.input)

@@ -1,0 +1,6 @@
+langgraph
+arxiv
+pydantic
+serpapi
+google-search-results
+python-dotenv
